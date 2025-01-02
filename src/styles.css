@@ -7,7 +7,7 @@ body {
   }
   
   header {
-    background-color: #bc97ad;
+    background-color: #f4f4f4;
     color: white;
     padding: 10px 0;
   }
@@ -25,7 +25,7 @@ body {
   }
   
   header nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
   }
@@ -33,24 +33,59 @@ body {
   header nav ul li a:hover {
     text-decoration: underline;
   }
+
+  /* Home Section */
+  #home {
+    margin: 0 auto;
+  }
+
+  .home {
+    background-color: rgb(211, 229, 237);
+    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+  }
+
+  .home input {
+    padding: 10px;
+    padding-right: 70px;
+    position: static;
+    border: 1.5px solid white;
+    min-width: 80px;
+    border-radius: 10px;
+  }
+
+  .home button {
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: medium;
+    background-color: #f5d9d9;
+    border: 1.5px solid #f5d9d9;
+    transition: border-color 0.3s;
+  }
+
+  .home button:hover {
+    border-color: black;
+  }
   
   /* Newsletters Section */
   #newsletters {
-    padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
   }
   
   .newsletter {
     background-color: rgb(215, 207, 207);
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .newsletter h2 {
     color: #333;
+    position: static;
   }
   
   .newsletter .date {
@@ -80,12 +115,27 @@ body {
   .read-more:hover {
     text-decoration: underline;
   }
+
+  /* About */
+  #about {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about {
+    background-color: rgb(247, 248, 222);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
   
   /* Footer */
   footer {
     text-align: center;
-    background-color: #bc97ad;
-    color: white;
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
     padding: 10px 0;
     position: static;
     width: 100%;
@@ -93,7 +143,7 @@ body {
   }
   
   footer a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
   
