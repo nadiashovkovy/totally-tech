@@ -1,0 +1,14 @@
+/* current newsletter view */
+
+.newsletter-image {
+    width: 100%; 
+    max-width: 1000px; 
+    height: auto; 
+    margin-bottom: 15px; 
+  }
+  .current-newsletter {
+    text-align: center;
+    background-color: #efede5;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
