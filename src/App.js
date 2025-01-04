@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+
 const App = () => {
   const [issues, setIssues] = useState([]); // List of newsletter issues
   const [currentIssueIndex, setCurrentIssueIndex] = useState(0); // Current issue index
