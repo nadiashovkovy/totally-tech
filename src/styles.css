@@ -74,6 +74,7 @@ body {
     padding: 10px;
     border-radius: 10px; 
     font-size: medium;
+    -webkit-text-fill-color: #f4f4f4;
     background-color: #323232;
     border: 1.5px solid #bc97ad;
     transition: border-color 0.3s;
@@ -167,9 +168,9 @@ body {
   }
 
   .stay-in-loop {
-    display: flex;
+    text-align: center;
     background-color: #efede5;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
     padding: 20px;
     padding-left: auto;
@@ -177,16 +178,14 @@ body {
   }
 
   .stay-in-loop h2 {
+    text-align: center;
     position: static;
-    margin-inline-start: auto;
-    margin-right: 4%;
     margin-top:inherit;
-    margin-bottom: inherit;
   }
 
   .stay-in-loop input {
+    margin-inline-end: auto;
     padding: 10px;
-    padding-right: 70px;
     position: static;
     border: 1.5px solid white;
     min-width: 100;
@@ -195,22 +194,22 @@ body {
     margin-right: 1%;
     margin-top:inherit;
     margin-bottom: inherit;
-    margin-inline-start: auto;
   }
 
   .stay-in-loop button {
+    display: inline-flex;
     padding: 10px;
     border-radius: 10px; 
     position: static;
     font-size: medium;
     max-height: 49px;
     background-color: #323232;
+    -webkit-text-fill-color: #f4f4f4;
     border: 1.5px solid #323232;
     border: 1.5px solid #bc97ad;
     transition: border-color 0.3s;
     margin-top:inherit;
-    margin-bottom: inherit;
-    margin-inline-end: auto;
+    margin-bottom: 25px;
   }
 
   /* Footer */
