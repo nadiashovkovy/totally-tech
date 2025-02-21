@@ -18,5 +18,24 @@
             </article>
         </section>
     </main>
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                title: params.get('title'),
+                date: params.get('date'),
+                image: params.get('image')
+            };
+        }
+
+        // Update the content based on query parameters
+        document.addEventListener('DOMContentLoaded', () => {
+            const { title, date, image } = getQueryParams();
+            if (title) document.getElementById('newsletter-title').textContent = title;
+            if (date) document.getElementById('newsletter-date').textContent = `Published on: ${date}`;
+            if (image) document.getElementById('newsletter-image').src = image;
+        });
+    </script>
 </body>
 </html>

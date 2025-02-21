@@ -132,6 +132,38 @@ body {
     text-decoration: underline;
   }
 
+  /* Newsletters Section */
+  #past-newsletters {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .scroll-container a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .scroll-container img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .scroll-container img:hover {
+    transform: scale(1.1);
+  }
+
+
   /* About */
   #about {
     max-width: 100%;
@@ -140,15 +172,29 @@ body {
 
   .about {
     display: flex;
+    align-items: center;
     background-color: #d9c0cf;
-    margin: 0 auto;
+    margin: 20px auto;
     margin-top: 70px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 20px;
+    /* max-width: 800px; */
+  }
+
+  .about-text-container {
+    margin-left: 7%;
+    margin-right: 7%;
+    flex: 1;
+    text-align: left;
   }
 
   .about h2 {
     margin-inline-end: auto;
+    margin-bottom: 10px;
+  }
+
+  .about-text {
+    margin: 0 auto;
+    line-height: 1.6;
   }
 
   .about-image {
@@ -156,7 +202,7 @@ body {
     max-width: 400px;
     margin-inline-end: auto;
     height: auto; 
-    margin-left: auto;
+    margin-left: 7%;
   }
 
 
@@ -239,5 +285,6 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
   }
+
 
   
