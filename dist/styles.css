@@ -1,14 +1,40 @@
 /* current newsletter view */
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.current-newsletter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
 .newsletter-image {
-    width: 100%; 
-    max-width: 1000px; 
-    height: auto; 
-    margin-bottom: 15px; 
+  width: 70%; 
+  height: auto; 
+  margin-bottom: 15px; 
+}
+
+.current-newsletter h2 {
+  padding-top: 5%;
+}
+  
+.current-newsletter button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 15px;
+  width: 30%;
+  max-width: 200px;
+  background-color: #D0E3E8;
+  border: 1.5px solid #000000;
+  color: black;
+  cursor:pointer;
+  margin-bottom: 5%;
+  transition: transform 0.3s;
   }
-  .current-newsletter {
-    text-align: center;
-    background-color: #efede5;
-    padding-top: 5%;
-    padding-bottom: 5%;
+  
+  .current-newsletter button:hover {
+    transform: scale(1.1);
   }

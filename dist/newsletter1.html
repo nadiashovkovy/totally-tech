@@ -7,6 +7,14 @@
   <link rel="icon" href="favicon.ico">
   <title>December 2024</title>
   <link rel="stylesheet" href="styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    /* Add this CSS to make the current-newsletter section scrollable in full-screen mode */
+    #current-newsletter:fullscreen {
+        overflow: auto;
+    }
+  </style>
 </head>
 <body>
     <main>
@@ -14,28 +22,53 @@
             <article class="current-newsletter">
                 <h2>The December 2024 Newsletter.</h2>
                 <p class="date">Published on: January 1, 2024</p>
+                <button id="fullscreen-btn">View in Full Screen!</button>
                 <img src = "https://github.com/nadiashovkovy/totally-tech/blob/main/public/full-newsletters/December2024.png?raw=true" alt = "current-newsletter" class = "newsletter-image">
             </article>
         </section>
     </main>
-    <!-- <script>
-        // Function to get query parameters
-        function getQueryParams() {
-            const params = new URLSearchParams(window.location.search);
-            return {
-                title: params.get('title'),
-                date: params.get('date'),
-                image: params.get('image')
-            };
-        }
+    <script>
+        // // Function to get query parameters
+        // function getQueryParams() {
+        //     const params = new URLSearchParams(window.location.search);
+        //     return {
+        //         title: params.get('title'),
+        //         date: params.get('date'),
+        //         image: params.get('image')
+        //     };
+        // }
 
-        // Update the content based on query parameters
-        document.addEventListener('DOMContentLoaded', () => {
-            const { title, date, image } = getQueryParams();
-            if (title) document.getElementById('newsletter-title').textContent = title;
-            if (date) document.getElementById('newsletter-date').textContent = `Published on: ${date}`;
-            if (image) document.getElementById('newsletter-image').src = image;
+        // // Update the content based on query parameters
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const { title, date, image } = getQueryParams();
+        //     if (title) document.getElementById('newsletter-title').textContent = title;
+        //     if (date) document.getElementById('newsletter-date').textContent = `Published on: ${date}`;
+        //     if (image) document.getElementById('newsletter-image').src = image;
+        // });
+
+        // Full-screen functionality
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        fullscreenBtn.addEventListener('click', () => {
+            const elem = document.querySelector('#current-newsletter');
+            if (!document.fullscreenElement) {
+                elem.requestFullscreen().then(() => {
+                    fullscreenBtn.textContent = 'Exit Full Screen';
+                }).catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                    fullscreenBtn.textContent = 'View in Full Screen!';
+                });
+            }
         });
-    </script> -->
+
+        // Listen for fullscreen change events to update button text
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                fullscreenBtn.textContent = 'View in Full Screen!';
+            }
+        });
+    </script>
 </body>
 </html>
