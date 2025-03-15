@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,6 +10,14 @@ body {
     background-color: #f4f4f4;
     color: white;
     padding: 10px 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    scroll-behavior: smooth;
   }
   
   header nav ul {
@@ -190,11 +198,13 @@ body {
   .about h2 {
     margin-inline-end: auto;
     margin-bottom: 10px;
+    font-size: clamp(20px, 1.5vw, 40px);
   }
 
   .about-text {
     margin: 0 auto;
     line-height: 1.6;
+    font-size: clamp(10px, 1.5vw, 15px);
   }
 
   .about-image {
@@ -208,9 +218,10 @@ body {
 
   /* Stay in the Loop */
   #stay-in-loop {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .stay-in-loop {
@@ -227,6 +238,7 @@ body {
     text-align: center;
     position: static;
     margin-top:inherit;
+    font-size: (20px, 1.5vw, 40px);
   }
 
   .stay-in-loop input {
@@ -234,7 +246,7 @@ body {
     padding: 10px;
     position: static;
     border: 1.5px solid white;
-    min-width: 100;
+    width: clamp(200px, 50vw, 500px);
     max-height: 25px;
     border-radius: 10px;
     margin-right: 1%;
@@ -272,6 +284,7 @@ body {
   footer a {
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-size: (20px, 1.5vw, 40px);
   }
   
   footer a:hover {
