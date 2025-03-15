@@ -7,13 +7,14 @@ body {
   }
   
   header {
-    position: absolute;
-    background-color: #f4f4f4e5;
+    position: fixed;
+    background-color: #f4f4f491;
     top: 0;
     left: 0;
     width: 100%;
     color: rgb(255, 255, 255);
     padding: 10px 0;
+    z-index: 10;
   }
 
   html {
@@ -47,16 +48,23 @@ body {
 
   /* Home Section */
   #home {
-    margin: 0 auto;
-    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(211, 229, 237);
   }
 
   .home {
-    background-color: rgb(211, 229, 237);
+    width: 65%;
+    text-align: right;
+    justify-content: center;
+    display: center;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .main-logo {
@@ -67,14 +75,17 @@ body {
   }
 
   .home h2 {
-    margin-top: -10px;
-    margin-bottom: 30px;
+    margin-top: -30px;
+    margin-bottom: 5px;
     font-size: clamp(20px, 1.5vw, 50px);
+    min-width: 65%;
   }
 
   .home p {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: clamp(10px, 1.5vw, 15px);
+    min-width: 65%;
+    padding-bottom: 15px;
   }
 
   .home input {
@@ -82,10 +93,8 @@ body {
     padding-right: 70px;
     position: static;
     border: 1.5px solid white;
-    min-width: 80px;
-    max-width: 250px;
+    width: clamp(50px, 50vw, 400px);
     border-radius: 10px;
-    margin-right: 10px;
   }
 
   .home button {
@@ -97,6 +106,7 @@ body {
     border: 1.5px solid #bc97ad;
     transition: border-color 0.3s;
     transition: transform 0.3s;
+    margin-left: 10px;
   }
 
   .home button:hover {
@@ -106,9 +116,10 @@ body {
   
   /* Newsletters Section */
   #newsletters {
-    width: clamp(400px, 50vw, 1400px);
+    width: 65%;
     margin: 0 auto;
     text-align: center;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
 
@@ -116,12 +127,13 @@ body {
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
   }
   
   .newsletter h2 {
     color: #333;
     position: static;
+    font-size: clamp(20px, 1.5vw, 50px);
   }
   
   .newsletter .date {
@@ -137,18 +149,12 @@ body {
 
   .newsletter-image {
     width: 100%; 
-    max-width: 1000px; 
-    height: auto; 
-    margin-bottom: 15px; 
-    transition: transform 0.3s;
-  }
-
-  .newsletter-image:hover {
-    transform: scale(1.05);
+    height: auto;
+    margin-top: 20px;  
+    margin-bottom: 40px; 
   }
   
   .read-more {
-    margin-top: 10px;
     color: #000000;
     text-decoration: none;
   }
@@ -159,12 +165,16 @@ body {
 
   /* Newsletters Section */
   #past-newsletters {
-    width: 70%;
+    width: 65%;
     justify-content: center;  /* Centers the content horizontally */
     align-items: flex-end;  /* Centers the content vertically */
     position: relative;  /* Allows absolute positioning of the button */
     margin: 0 auto; 
     padding-bottom: 10%;
+  }
+
+  .past-newsletters h2 {
+    font-size: clamp(20px, 1.5vw, 50px);
   }
 
   .past-newsletters .past {
@@ -201,11 +211,11 @@ body {
   #about {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #d9c0cf;
+    background-color: #D0E3E8;
   }
 
   .about {
-    width: 70%;
+    width: 65%;
     display: flex;
     align-items: center;
     margin: 20px auto;
@@ -223,7 +233,7 @@ body {
   .about h2 {
     margin-inline-end: auto;
     margin-bottom: 10px;
-    font-size: clamp(20px, 1.5vw, 40px);
+    font-size: clamp(20px, 1.5vw, 50px);
   }
 
   .about-text {
@@ -242,7 +252,7 @@ body {
   }
 
   #contact {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -296,7 +306,7 @@ body {
     text-align: center;
     position: static;
     margin-top:inherit;
-    font-size: (20px, 1.5vw, 40px);
+    font-size: clamp(20px, 1.5vw, 50px);
   }
 
   .stay-in-loop input {
@@ -350,7 +360,7 @@ body {
   footer a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: (20px, 1.5vw, 40px);
+    font-size: clamp(10px, 1.5vw, 30px);
   }
   
   footer a:hover {
