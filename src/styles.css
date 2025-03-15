@@ -48,6 +48,7 @@ body {
   /* Home Section */
   #home {
     margin: 0 auto;
+    padding-bottom: 100px;
   }
 
   .home {
@@ -61,7 +62,7 @@ body {
   .main-logo {
     box-shadow: none;
     border-color: rgb(211, 229, 237);
-    padding-top: 10%;
+    padding-top: 5%;
     width: clamp(200px, 50vw, 400px);
   }
 
@@ -82,7 +83,9 @@ body {
     position: static;
     border: 1.5px solid white;
     min-width: 80px;
+    max-width: 250px;
     border-radius: 10px;
+    margin-right: 10px;
   }
 
   .home button {
@@ -93,10 +96,12 @@ body {
     background-color: #323232;
     border: 1.5px solid #bc97ad;
     transition: border-color 0.3s;
+    transition: transform 0.3s;
   }
 
   .home button:hover {
     border-color: black;
+    transform: scale(1.05);
   }
   
   /* Newsletters Section */
@@ -104,6 +109,7 @@ body {
     width: clamp(400px, 50vw, 1400px);
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 100px;
   }
 
   .newsletter {
@@ -142,7 +148,6 @@ body {
   }
   
   .read-more {
-    display: list-item;
     margin-top: 10px;
     color: #000000;
     text-decoration: none;
@@ -212,7 +217,7 @@ body {
   .about-text-container {
     margin-left: 7%;
     flex: 1;
-    text-align: left;
+    text-align: right;
   }
 
   .about h2 {
@@ -225,6 +230,7 @@ body {
     margin: 0 auto;
     line-height: 1.6;
     font-size: clamp(7px, 1.5vw, 15px);
+    max-width: fit-content
   }
 
   .about-image {
@@ -233,6 +239,38 @@ body {
     margin-inline-end: auto;
     height: auto; 
     border-radius: 10px;
+  }
+
+  #contact {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .real-btn3 {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: rgb(255, 255, 255);
+    background: #1E1E1E;
+    padding: 10px 20px;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  input, textarea {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(10px, 2vw, 16px);;
+      display:inline-block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;   
+      padding: clamp(10px, 1vw, 30px);
+      border: 1px solid #000000;
+      border-radius: 15px;
   }
 
 
@@ -263,7 +301,7 @@ body {
 
   .stay-in-loop input {
     margin-inline-end: auto;
-    padding: 10px;
+    padding: clamp(20px, 1vw, 30px);
     position: static;
     border: 1.5px solid white;
     width: clamp(200px, 50vw, 500px);
@@ -288,6 +326,14 @@ body {
     transition: border-color 0.3s;
     margin-top:inherit;
     margin-bottom: 25px;
+    border: 1.5px solid #bc97ad;
+    transition: border-color 0.3s;
+    transition: transform 0.3s;
+  }
+
+  .stay-in-loop button:hover {
+    border-color: black;
+    transform: scale(1.05);
   }
 
   /* Footer */
@@ -319,6 +365,16 @@ body {
     padding-bottom: 5%;
   }
 
+/* enlarge on hover */
+.enlarge-on-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.enlarge-on-hover:hover {
+  transform: scale(1.05);
+}
+
+/* enlarge text on hover */
 .enlarge-text-on-hover {
     transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
